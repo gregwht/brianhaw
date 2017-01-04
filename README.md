@@ -2,7 +2,7 @@
 <html>
 <body>
 
-    <title>"Watch Position"</title>
+<p>Watch Position</p>
 <p>Click the button to get your coordinates.</p>
 
 <button onclick="getLocation()">Try It</button>
