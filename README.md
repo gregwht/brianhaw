@@ -1,26 +1,34 @@
+<!DOCTYPE HTML>
 <html>
-<body>
+<head>
+<title>The most basic form of geolocation</title>
+<script type="text/javascript">
 
-<p>Watch Position: Automatically get location.</p>
-
-<p id="demo"></p>
-
-<script>
-getLocation();
-var x = document.getElementById("demo");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
+function TestGeo()
+    {
+         if (navigator.geolocation) 
+            {
+              navigator.geolocation.getCurrentPosition( TestMap, error, {maximumAge: 30000, timeout: 10000, enableHighAccuracy: true} );
+        }
+        else
+        {
+              alert("Sorry, but it looks like your browser does not support geolocation.");
+        }
     }
-}
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude +
-    "<br>Accuracy: " + position.coords.accuracy; 
-}
+
+function TestMap(position) {
+	var latitude = position.coords.latitude;
+	var longitude = position.coords.longitude;  
+	alert("Your coordinates are " + position.coords.latitude + ", " + position.coords.longitude);
+	}
+	
+function error() {
+		alert("Cannot locate user");
+		}
 </script>
+
+</head>
+<body onload="TestGeo();">
+
 </body>
 </html>
