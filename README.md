@@ -3,10 +3,11 @@
 
 <p>Watch Position: Click the button to get your coordinates.</p>
 
+<button onclick="getLocation()">Try It</button>
+
 <p id="demo"></p>
 
 <script>
-getLocation();
 var x = document.getElementById("demo");
 
 function getLocation() {
