@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<p>Watch Position: Click the button to get your coordinates.</p>
+<p>Watch Position: Automatically get location.</p>
 
 <p id="demo"></p>
 
