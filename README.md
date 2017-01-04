@@ -2,6 +2,9 @@
 <head>
 <title>The most basic form of geolocation</title>
 
+
+<p>You may need to enable location services for your browser.
+<br>On iPhone, ensure location services are enabled by going to Settings > Privacy > Location Services > Safari > While Using the App.</p>
 <p id="demo"></p>
 
 <script type="text/javascript">
