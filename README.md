@@ -12,7 +12,7 @@ function TestGeo()
     {
          if (navigator.geolocation) 
             {
-              navigator.geolocation.getCurrentPosition( TestMap, error, {maximumAge: 30000, timeout: 10000, enableHighAccuracy: true} );
+              navigator.geolocation.getCurrentPosition( TestMap, error, {maximumAge: 1000, timeout: 10000, enableHighAccuracy: true} );
         }
         else
         {
