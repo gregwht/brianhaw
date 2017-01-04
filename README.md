@@ -1,7 +1,12 @@
 <html>
 <head>
 <title>The most basic form of geolocation</title>
+
+<p id="demo"></p>
+
 <script type="text/javascript">
+
+var x = document.getElementById("demo");
 
 function TestGeo()
     {
@@ -11,18 +16,20 @@ function TestGeo()
         }
         else
         {
-              alert("Sorry, but it looks like your browser does not support geolocation.");
+              x.innerHTML = "Geolocation is not supported by this browser."
         }
     }
 
 function TestMap(position) {
 	var latitude = position.coords.latitude;
 	var longitude = position.coords.longitude;  
-	alert("Your coordinates are " + position.coords.latitude + ", " + position.coords.longitude);
+	 x.innerHTML = "Latitude: " + position.coords.latitude + 
+	    "<br>Longitude: " + position.coords.longitude + 
+	    "<br>Accuracy: " + position.coords.accuracy; 
 	}
 	
 function error() {
-		alert("Cannot locate user");
+		x.innerHTML = "Cannot locate user."
 		}
 </script>
 
