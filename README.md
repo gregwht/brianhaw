@@ -1,7 +1,9 @@
 <html>
 <body>
 
-<p>Watch Position: Click the button to get your coordinates.</p>
+<p>Watch Position: Click the button to get your coordinates.
+
+UPDATE</p>
 
 <button onclick="getLocation()">Try It</button>
 
